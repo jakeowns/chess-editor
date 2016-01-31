@@ -8,5 +8,9 @@ html
     link(rel='stylesheet', href='/app/css/styles.css')
     script(data-main='/app/js/main' src='/bower/requirejs/require.js')
   body
-    #chess-board
-      | Board here
+      h1 Chess Editor
+      board
+        each i in [1, 2, 3, 4, 5, 6, 7, 8]
+          board-row
+            each j in [1, 2, 3, 4, 5, 6, 7, 8]
+              square(data-row=i, data-col=j,class=((i+j)%2==0 ? 'white' : 'black'))
