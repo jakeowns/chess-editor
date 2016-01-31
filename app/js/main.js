@@ -11,7 +11,6 @@ require.config({
 
 require(['jquery', 'bootstrap', 'chessBoard'], function($, boostrap, chessBoard) {
   $(function() {
-    console.log('dom.ready');  // dom.ready
     chessBoard.run();
   });
 });
